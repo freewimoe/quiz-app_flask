@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz</title>
+</head>
+<body>
+  <h1>Beantworte die Fragen:</h1>
+  <form method="POST">
+    {% for i, q in enumerate(questions) %}
+      <p>{{ q.question }}</p>
+      <input type="text" name="q{{ i }}">
+    {% endfor %}
+    <br>
+    <button type="submit">Abschicken</button>
+  </form>
+</body>
+</html>
